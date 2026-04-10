@@ -9,3 +9,7 @@ class User(AbstractUser):
     phone = models.CharField(max_length=20, blank=True, null=True)
     role = models.CharField(max_length=40, default='worker')
     department = models.CharField(max_length=100)
+    
+    
+    def __str__(self):
+        return self.user_name
